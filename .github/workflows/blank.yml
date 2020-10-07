@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: "Welcome message"
         uses: actions/checkout@v2
-      
-      - with:
+        with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           pr-message: "Hey **#** welcome to this repo"
+          
