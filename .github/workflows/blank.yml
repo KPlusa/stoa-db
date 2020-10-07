@@ -1,0 +1,14 @@
+name: "PR Greeter"
+on: [pull_request]
+
+
+jobs:
+  pr-greeter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Welcome message"
+        uses: actions/checkout@v2
+      
+      - with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: "Hey **#** welcome to this repo"
